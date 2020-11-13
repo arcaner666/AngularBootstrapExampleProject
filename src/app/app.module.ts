@@ -7,11 +7,14 @@ import { HeaderComponent } from './components/header/header.component';
 import { NavComponent } from './components/nav/nav.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
-import { ContentComponent } from './components/content/content.component';
-import { AboutUsComponent } from './components/about-us/about-us.component';
 import { TableComponent } from './components/table/table.component';
 import { ButtonsComponent } from './components/buttons/buttons.component';
 import { VariableComponent } from './components/variable/variable.component';
+import { ColorComponent } from './components/color/color.component';
+import { ParagraphComponent } from './components/paragraph/paragraph.component';
+import { HeadingsComponent } from './components/headings/headings.component';
+import { ImageComponent } from './components/image/image.component';
+import { JumbotronComponent } from './components/jumbotron/jumbotron.component';
 
 @NgModule({
   declarations: [
@@ -20,9 +23,12 @@ import { VariableComponent } from './components/variable/variable.component';
     NavComponent,
     FooterComponent,
     HomeComponent,
-    ContentComponent,
-    AboutUsComponent,
+    ColorComponent,
+    ParagraphComponent,
+    HeadingsComponent,
     TableComponent,
+    ImageComponent,
+    JumbotronComponent,
     ButtonsComponent,
     VariableComponent
   ],
