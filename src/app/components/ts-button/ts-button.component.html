@@ -1,0 +1,82 @@
+<app-nav2></app-nav2>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <h3 class="text-primary text-center">(click)="" Özelliği</h3>
+      <button class="btn btn-primary" (click)="StandartAlert()">Standart Alert</button>
+    </div>
+    <div class="col-md-4">
+      <h3 class="text-primary text-center">(click)="" Özelliği</h3>
+      <button class="btn btn-primary" (click)="BootstrapAlert()">Bootstrap Alert</button>
+      <div class="alert alert-primary">
+        <p>{{mesaj1}}</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <h3 class="text-primary text-center">*ngIf="" Özelliği</h3>
+      <button class="btn btn-primary" (click)="Tikla()">Tıkla</button>
+      <button class="btn btn-success" (click)="Goster()">Göster</button>
+      <button class="btn btn-danger" (click)="Gizle()">Gizle</button>
+      <button class="btn btn-warning" (click)="GosterGizle()">Göster-Gizle</button>
+      <div class="alert alert-danger" *ngIf="menuGorunuyorMu">
+        <p>{{mesaj2}}</p>
+      </div>
+    </div>
+    <p>&nbsp;</p>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+      <h3 class="text-primary text-center">*ngIf="" Özelliği</h3>
+      <div class="alert alert-danger">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi aspernatur quam est quos debitis molestias
+        perferendis, voluptas minima, dolorem quisquam maiores consectetur molestiae officia eius laudantium, eos libero
+        sapiente expedita?
+        </p>
+        <button class="btn btn-outline-danger btn-block alert-link" (click)="ackapa=true;" *ngIf="!ackapa">Genişlet</button>
+        <p *ngIf="ackapa">
+        Vitae numquam consequatur odio dolorum eveniet molestias. Consequuntur quia doloribus ducimus, harum tempora
+        qui. Harum nemo tempora maiores porro ex, hic odit optio aspernatur. Mollitia architecto veritatis obcaecati
+        ratione natus!
+        Autem ad similique expedita, qui deserunt obcaecati blanditiis possimus cum dignissimos doloribus facilis ipsa
+        fugit dolore laboriosam, iste repudiandae omnis fuga suscipit vel iusto dolor odio voluptate dolores adipisci!
+        Veritatis.
+        </p>
+        <button class="btn btn-outline-danger btn-block alert-link" (click)="ackapa=false;" *ngIf="ackapa">Daralt</button>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <h3 class="text-primary text-center">Arttır-Azalt</h3>
+      <button class="btn btn-success" (click)="Arttir1()" *ngIf="sayi1<10">Arttır</button>
+      <button class="btn btn-danger" (click)="Azalt1()" *ngIf="sayi1>0">Azalt</button>
+      <div class="alert alert-primary">
+        <p>Sayı : {{sayi1}}</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <h3 class="text-primary text-center">[ngClass]="" ile Class'lara Erişme</h3>
+      <button class="btn btn-success" (click)="Arttir2()" *ngIf="sayi2<10">Arttır</button>
+      <button class="btn btn-danger" (click)="Azalt2()" *ngIf="sayi2>0">Azalt</button>
+      <div class="alert alert-primary" [ngClass]="sayi2 > 5 ? 'alert-success' : 'alert-danger'">
+        <p>Sayı : {{sayi2}}</p>
+      </div>
+    </div>
+    <p>&nbsp;</p>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+      <h3 class="text-primary text-center">*ngFor="" Yapısı</h3>
+      <ul class="list-group">
+        <li class="list-group-item" *ngFor="let gun of gunler">{{gun}}</li>
+      </ul>
+    </div>
+    <div class="col-md-4">
+      <h3 class="text-primary text-center">Liste Elemanı Seçme</h3>
+      <div class="alert alert-primary">
+        <p>Seçili Gün : {{seciliGun}}</p>
+      </div>
+      <ul class="list-group">
+        <li class="list-group-item" *ngFor="let gun of gunler" (click)="GunSec(gun)" style="cursor: pointer;" [ngClass]="{'active': seciliGun==gun}">{{gun}}</li>
+      </ul>
+    </div>
+  </div>
+</div>
