@@ -1,19 +1,26 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AlertComponent } from './components/alert/alert.component';
+import { AngularComponent } from './components/angular/angular.component';
 import { ButtonsComponent } from './components/buttons/buttons.component';
 import { CardComponent } from './components/card/card.component';
 import { ColorComponent } from './components/color/color.component';
+import { FormCheckComponent } from './components/form-check/form-check.component';
+import { FormControlComponent } from './components/form-control/form-control.component';
 import { HeadingsComponent } from './components/headings/headings.component';
 import { HomeComponent } from './components/home/home.component';
 import { ImageComponent } from './components/image/image.component';
+import { InputAccessComponent } from './components/input-access/input-access.component';
 import { JumbotronComponent } from './components/jumbotron/jumbotron.component';
 import { ListComponent } from './components/list/list.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
+import { NgModelComponent } from './components/ng-model/ng-model.component';
+import { NgTemplateComponent } from './components/ng-template/ng-template.component';
 import { ParagraphComponent } from './components/paragraph/paragraph.component';
+import { RegistrationFormComponent } from './components/registration-form/registration-form.component';
+import { RegistrationSystemComponent } from './components/registration-system/registration-system.component';
 import { TableComponent } from './components/table/table.component';
-import { TsButtonComponent } from './components/ts-button/ts-button.component';
 import { VariableComponent } from './components/variable/variable.component';
 
 const routes: Routes = [
@@ -32,7 +39,14 @@ const routes: Routes = [
   { path: 'card', component: CardComponent },
   { path: 'navigation', component: NavigationComponent },
   { path: 'navbar', component: NavbarComponent },
-  { path: 'ts-button', component: TsButtonComponent }
+  { path: 'angular', component: AngularComponent },
+  { path: 'form-control', component: FormControlComponent },
+  { path: 'form-check', component: FormCheckComponent },
+  { path: 'registration-form', component: RegistrationFormComponent },
+  { path: 'ng-template', component: NgTemplateComponent },
+  { path: 'input-access', component: InputAccessComponent },
+  { path: 'ng-model', component: NgModelComponent },
+  { path: 'registration-system', component: RegistrationSystemComponent }
 ];
 
 @NgModule({

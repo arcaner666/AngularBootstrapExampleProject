@@ -1,12 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-ts-button',
-  templateUrl: './ts-button.component.html',
-  styleUrls: ['./ts-button.component.css']
+  selector: 'app-angular',
+  templateUrl: './angular.component.html',
+  styleUrls: ['./angular.component.css']
 })
-export class TsButtonComponent implements OnInit {
-
+export class AngularComponent implements OnInit {
   mesaj1: string;
   mesaj2: string;
   menuGorunuyorMu: boolean = false;

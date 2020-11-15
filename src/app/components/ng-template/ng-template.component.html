@@ -1,0 +1,49 @@
+<app-nav2></app-nav2>
+<ng-template #devam>
+  <div class="alert alert-success">
+    <p>Kayıtlar Devam Ediyor.</p>
+  </div>
+</ng-template>
+<ng-template #bitti>
+  <div class="alert alert-danger">
+    <p>Kayıtlar Sona Erdi.</p>
+  </div>
+</ng-template>
+<ng-template #kayit>
+  <div class="form-group">
+    <label for="username2">Kullanıcı Adı</label>
+    <input class="form-control" type="text" name="username2" id="username2">
+  </div>
+  <div class="form-group">
+    <label for="password2">Şifre</label>
+    <input class="form-control" type="password" name="password2" id="password2">
+  </div>
+  <div class="form-group">
+    <input class="form-control" class="btn btn-success btn-block" type="submit" value="Kaydet">
+  </div>
+</ng-template>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <h3 class="text-primary text-center">Template Butonla Kontrol</h3>
+      <button class="btn btn-primary btn-block" (click)="AlertGosterGizle()">Değiştir</button>
+      <div *ngIf="islem1==true; then devam; else bitti;"></div>
+      <p>&nbsp;</p>
+    </div>
+    <div class="col-md-6">
+      <h3 class="text-primary text-center">Bootstrap Kayıt Template</h3>
+      <button class="btn btn-primary btn-block" (click)="KayitGosterGizle()">Yeni Üyelik</button>
+      <div *ngIf="islem2==true; then kayit;"></div>
+    </div>
+  </div>
+  <div class="row">
+    <p>&nbsp;</p>
+    <div class="col-md-12">
+      <p><strong>
+        * ng-template component'i oluşturan öğeleri ve özellikleri tek tek yazmak yerine 
+        bunu ayrı bir blok olarak yazmamızı ve istediğimiz zaman bu bloğu tekrar tekrar 
+        çağırabilmemizi sağlar.
+      </strong></p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,30 @@
+<app-nav2></app-nav2>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <h3 class="text-primary text-center">Single Binding ngModel</h3>
+      <div class="form-group">
+        <input class="form-control" type="text" (ngModel)="isim1">
+      </div>
+      <p>{{isim1}}</p>
+    </div>
+    <div class="col-md-6">
+      <h3 class="text-primary text-center">Two Binding ngModel</h3>
+      <div class="form-group">
+        <input class="form-control" type="text" [(ngModel)]="isim2">
+      </div>
+      <p>{{isim2}}</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <p><strong>
+        * [(ngModel)]="" yapısının kullanılabilmesi için app.module.ts'ye ilgili modülün eklenmesi 
+        gerekmektedir.
+      </strong></p>
+      <p><strong>
+        ** (ngModel)="" yapısı tek yönlü veri iletirken, [(ngModel)]="" yapısı çift yönlü veri iletir.
+      </strong></p>
+    </div>
+  </div>
+</div>

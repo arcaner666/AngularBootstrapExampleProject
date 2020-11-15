@@ -1,0 +1,27 @@
+<app-nav2></app-nav2>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <h5 class="text-primary text-center">Input Bileşenini Konsola Yazma</h5>
+      <div class="form-group">
+        <input #yazi1 class="form-control" type="text">
+        <button class="btn btn-primary" (click)="Yaz1(yazi1)">Yaz</button>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <h5 class="text-primary text-center">Input Bileşeninin Değerini Konsola Yazma</h5>
+      <div class="form-group">
+        <input #yazi2 class="form-control" type="text">
+        <button class="btn btn-primary" (click)="Yaz2(yazi2.value)">Yaz</button>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <h5 class="text-primary text-center">Input Bileşeninin Değerini Ekrana Yazma</h5>
+      <div class="form-group">
+        <input #yazi3 class="form-control" type="text">
+        <button class="btn btn-primary" (click)="Yaz3(yazi3.value)">Yaz</button>
+      </div>
+      <p><strong>{{deger}}</strong></p>
+    </div>
+  </div>
+</div>
