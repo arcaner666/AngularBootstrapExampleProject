@@ -50,6 +50,8 @@ export class RegistrationSystemComponent implements OnInit {
 
     baslik: string = "Yeni Kayıt";
 
+    numaraDegiskeni: number = 0;
+
   constructor() { }
 
   ngOnInit() {
@@ -77,5 +79,9 @@ export class RegistrationSystemComponent implements OnInit {
 
     this.seciliKisi = new Kisi();
     this.baslik = "Yeni Kayıt";
+  }
+
+  Onayla(){
+    alert(this.numaraDegiskeni);
   }
 }

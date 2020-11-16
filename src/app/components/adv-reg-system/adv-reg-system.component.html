@@ -1,0 +1,50 @@
+<app-nav2></app-nav2>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <form #KayitFormu="ngForm">
+        <p><strong>Two Binding [(ngModel)] kayit'taki varsayılan veriyi forma, formdaki veriyi de 
+          eşzamanlı olarak kayda gönderir. Formdaki her değişiklik anında kayda yansır.</strong></p>
+        <div class="form-group">
+          <label>Adı Soyadı</label>
+          <input class="form-control" type="text" name="adsoyad" ngModel [(ngModel)]="kayit.AdSoyad">
+        </div>
+        <p>&nbsp;</p>
+        <p><strong>Single Binding [ngModel] kayit'taki varsayılan veriyi forma bir kez gönderir 
+          fakat eşzamanlı olarak formdaki veriyi kayda göndermez. Sadece form submit edilirse 
+          formdaki veriyi kayda gönderir.</strong></p>
+        <div class="form-group">
+          <label>E-Posta</label>
+          <input class="form-control" type="text" name="mail" #mail="ngModel" [ngModel]="kayit.Mail" 
+          [ngClass]="{'is-invalid': mail.invalid && mail.dirty}" required>
+          <p class="text-danger" *ngIf="mail.invalid && mail.dirty">E-posta Giriniz</p>
+        </div>
+        <p>&nbsp;</p>
+        <p><strong>ngModel kayit'taki varsayılan veriyi forma göndermez. Sadece form submit edilirse 
+          formdaki veriyi kayda gönderir.</strong></p>
+        <div class="form-group">
+          <label>Yaş</label>
+          <input class="form-control" type="number" name="yas" ngModel>
+        </div>
+        <div class="form-group">
+          <input class="btn btn-success" type="submit" value="Kaydet" [disabled]="KayitFormu.invalid">
+        </div>
+      </form>
+    </div>
+    <div class="col-md-6">
+      <h3>Form Verileri</h3>
+      {{KayitFormu.value | json}}
+      <h3>Kişi Verileri</h3>
+      {{kayit | json}}
+    </div>
+  </div>
+  <div class="row">
+    <p>&nbsp;</p>
+    <div class="col-md-12">
+      <p><strong>formÖğesiAdı.pristine >>> içi değiştirilmemiş form öğesi</strong></p>
+      <p><strong>formÖğesiAdı.dirty >>> içi değiştirilmiş form öğesi</strong></p>
+      <p><strong>formÖğesiAdı.touched >>> üzerine tıklanmış form öğesi</strong></p>
+      <p><strong>formÖğesiAdı.untouched >>> üzerine tıklanmamış form öğesi</strong></p>
+    </div>
+  </div>
+</div>

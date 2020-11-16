@@ -29,6 +29,7 @@ import { NgTemplateComponent } from './components/ng-template/ng-template.compon
 import { InputAccessComponent } from './components/input-access/input-access.component';
 import { NgModelComponent } from './components/ng-model/ng-model.component';
 import { RegistrationSystemComponent } from './components/registration-system/registration-system.component';
+import { AdvRegSystemComponent } from './components/adv-reg-system/adv-reg-system.component';
 
 @NgModule({
   declarations: [
@@ -57,7 +58,8 @@ import { RegistrationSystemComponent } from './components/registration-system/re
     NgTemplateComponent,
     InputAccessComponent,
     NgModelComponent,
-    RegistrationSystemComponent
+    RegistrationSystemComponent,
+    AdvRegSystemComponent
   ],
   imports: [
     BrowserModule,

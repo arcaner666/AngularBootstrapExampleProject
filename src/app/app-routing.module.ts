@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { AdvRegSystemComponent } from './components/adv-reg-system/adv-reg-system.component';
 import { AlertComponent } from './components/alert/alert.component';
 import { AngularComponent } from './components/angular/angular.component';
 import { ButtonsComponent } from './components/buttons/buttons.component';
@@ -46,7 +47,8 @@ const routes: Routes = [
   { path: 'ng-template', component: NgTemplateComponent },
   { path: 'input-access', component: InputAccessComponent },
   { path: 'ng-model', component: NgModelComponent },
-  { path: 'registration-system', component: RegistrationSystemComponent }
+  { path: 'registration-system', component: RegistrationSystemComponent },
+  { path: 'adv-reg-system', component: AdvRegSystemComponent }
 ];
 
 @NgModule({
