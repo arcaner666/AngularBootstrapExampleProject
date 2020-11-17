@@ -1,0 +1,13 @@
+<app-nav2></app-nav2>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h4>Kişi Detayları</h4>
+      <p><strong>Adı Soyadı : </strong>{{seciliKisi.AdSoyad}}</p>
+      <p><strong>E-posta : </strong>{{seciliKisi.Mail}}</p>
+      <p><strong>Yaş : </strong>{{seciliKisi.Yas}}</p>
+      <button class="btn btn-info" [routerLink]="['/service']">Listeye Dön</button>
+      <button class="btn btn-danger" (click)="KayitSil(seciliKisi)">Sil</button>
+    </div>
+  </div>
+</div>

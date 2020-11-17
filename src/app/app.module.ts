@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { NavComponent } from './components/nav/nav.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -30,6 +30,11 @@ import { InputAccessComponent } from './components/input-access/input-access.com
 import { NgModelComponent } from './components/ng-model/ng-model.component';
 import { RegistrationSystemComponent } from './components/registration-system/registration-system.component';
 import { AdvRegSystemComponent } from './components/adv-reg-system/adv-reg-system.component';
+import { ReactiveFormComponent } from './components/reactive-form/reactive-form.component';
+
+import { ServiceComponent } from './components/service/service.component';
+import { DataService } from './services/data.service';
+import { DetayComponent } from './components/detay/detay.component';
 
 @NgModule({
   declarations: [
@@ -59,14 +64,20 @@ import { AdvRegSystemComponent } from './components/adv-reg-system/adv-reg-syste
     InputAccessComponent,
     NgModelComponent,
     RegistrationSystemComponent,
-    AdvRegSystemComponent
+    AdvRegSystemComponent,
+    ReactiveFormComponent,
+    ServiceComponent,
+    DetayComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+    DataService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

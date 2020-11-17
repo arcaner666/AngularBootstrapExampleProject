@@ -1,0 +1,27 @@
+<app-nav2></app-nav2>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <form [formGroup]="formKayit" (ngSubmit)="Kaydet()">
+        <div class="form-group">
+          <label>Adı Soyadı</label>
+          <input type="text" class="form-control" formControlName="adSoyad">
+        </div>
+        <div class="form-group">
+          <label>E-posta</label>
+          <input type="text" class="form-control" formControlName="mail">
+        </div>
+        <div class="form-group">
+          <label>Yaş</label>
+          <input type="text" class="form-control" formControlName="yas">
+        </div>
+        <div class="form-group">
+          <input type="submit" class="btn btn-success" value="Kaydet">
+        </div>
+        <div class="form-group">
+          <input type="reset" class="btn btn-danger" value="Temizle">
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

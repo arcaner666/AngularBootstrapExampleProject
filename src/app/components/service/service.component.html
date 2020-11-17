@@ -1,0 +1,29 @@
+<app-nav2></app-nav2>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      {{ad}}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <table class="table table-striped">
+        <thead>
+          <th>Id</th>
+          <th>Adı Soyadı</th>
+          <th>Detay</th>
+          <th>Sil</th>
+        </thead>
+        <tbody>
+          <tr *ngFor="let kayit of kayitlar">
+            <td>{{kayit.Id}}</td>
+            <td>{{kayit.AdSoyad}}</td>
+            <td><button class="btn btn-info" [routerLink]="['/detay',kayit.Id]">Detay</button></td>
+            <td><button class="btn btn-danger" (click)="KayitSil(kayit)">Sil</button></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
