@@ -7,6 +7,10 @@
   </div>
   <div class="row">
     <div class="col-md-12">
+      <div class="form-inline">
+        <input type="text" class="form-control" #ara>
+        <button class="btn btn-primary" (click)="KayitAra(ara.value)">Ara</button>
+      </div>
       <table class="table table-striped">
         <thead>
           <th>Id</th>
@@ -15,7 +19,7 @@
           <th>Sil</th>
         </thead>
         <tbody>
-          <tr *ngFor="let kayit of kayitlar">
+          <tr *ngFor="let kayit of filtreliKayitlar">
             <td>{{kayit.Id}}</td>
             <td>{{kayit.AdSoyad}}</td>
             <td><button class="btn btn-info" [routerLink]="['/detay',kayit.Id]">Detay</button></td>

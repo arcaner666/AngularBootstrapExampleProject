@@ -1,0 +1,82 @@
+<app-nav2></app-nav2>
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+      <h4>Ürünler</h4>
+      <table class="table table-hover">
+        <thead>
+          <th>Id</th>
+          <th>Adı</th>
+          <th>Fiyat</th>
+          <th>Kategori Id</th>
+          <th>Kategori Adı</th>
+          <th>Düzenle</th>
+          <th>Sil</th>
+        </thead>
+        <tbody>
+          <tr *ngFor="let urun of urunler">
+            <td>{{urun.urunId}}</td>
+            <td>{{urun.urunAdi}}</td>
+            <td>{{urun.urunFiyat | currency:"₺"}}</td>
+            <td>{{urun.urunKatId}}</td>
+            <td>{{urun.urunKatAdi}}</td>
+            <td><button class="btn btn-warning">Düzenle</button></td>
+            <td><button class="btn btn-danger">Sil</button></td>
+          </tr>
+        </tbody>
+      </table>
+      <h4>Ürün Ekle</h4>
+      <div class="form-group">
+        <label>Ürün Adı</label>
+        <input type="text" class="form-control" #urunAd>
+      </div>
+      <div class="form-group">
+        <label>Ürün Fiyatı</label>
+        <input type="number" class="form-control" #urunFiyat>
+      </div>
+      <div class="form-group">
+        <label>Ürün Kategori Adı</label>
+        <select class="form-control" #katId>
+          <option *ngFor="let kat of kategoriler" value="{{kat.katId}}">{{kat.katAdi}}</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <button class="btn btn-success" (click)="UrunKaydet(urunAd.value, urunFiyat.value, katId.value)">Kaydet</button>
+      </div>
+      <div [ngClass]="urunSonuc.islem == true ? 'alert alert-success':'alert alert-danger'"
+        *ngIf="urunSonuc.mesaj?.length > 0">{{urunSonuc.mesaj}}
+      </div>
+    </div>
+    <div class=" col-md-4">
+      <h4>Kategoriler</h4>
+      <table class="table table-hover">
+        <thead>
+          <th>Id</th>
+          <th>Adı</th>
+          <th>Düzenle</th>
+          <th>Sil</th>
+        </thead>
+        <tbody>
+          <tr *ngFor="let kategori of kategoriler">
+            <td>{{kategori.katId}}</td>
+            <td>{{kategori.katAdi}}</td>
+            <td><button class="btn btn-warning" [routerLink]="['/katduzenlesil', kategori.katId, 1]">Düzenle</button>
+            </td>
+            <td><button class="btn btn-danger" [routerLink]="['/katduzenlesil', kategori.katId, 2]">Sil</button></td>
+          </tr>
+        </tbody>
+      </table>
+      <h4>Kategori Ekle</h4>
+      <div class="form-group">
+        <label>Kategori Adı</label>
+        <input type="text" class="form-control" #katAd>
+      </div>
+      <div class="form-group">
+        <button class="btn btn-success" (click)="KategoriKaydet(katAd.value)">Kaydet</button>
+      </div>
+      <div [ngClass]="katSonuc.islem == true ? 'alert alert-success':'alert alert-danger'"
+        *ngIf="katSonuc.mesaj?.length > 0">{{katSonuc.mesaj}}
+      </div>
+    </div>
+  </div>
+</div>

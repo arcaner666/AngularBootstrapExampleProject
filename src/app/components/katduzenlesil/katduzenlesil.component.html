@@ -1,0 +1,42 @@
+<app-nav2></app-nav2>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <form #katForm="ngForm" (ngSubmit)="Kaydet()" *ngIf="islem == 1">
+        <div class="card">
+          <div class="card-header bg-primary text-white">
+            <h4>Kategori Düzenle</h4>
+          </div>
+          <div class="card-body">
+            <div class="form-group">
+              <label>Kategori Adı</label>
+              <input type="text" class="form-control" name="KatAdi" ngModel [(ngModel)]="secKat.katAdi">
+            </div>
+          </div>
+          <div class="card-footer">
+            <input type="submit" value="Kaydet" class="btn btn-success">
+            <button class="btn btn-primary ml-2" [routerLink]="['/etrade']">İptal</button>
+          </div>
+        </div>
+      </form>
+      <div class="card" *ngIf="islem == 2">
+        <div class="card-header bg-danger text-white">
+          <h4>Kategori Sil</h4>
+        </div>
+        <div class="card-body">
+          <div class="form-group">
+            <strong>Kategori Adı: </strong> {{secKat.katAdi}}
+            <h5>Kategori silinecektir onaylıyor musunuz?</h5>
+          </div>
+        </div>
+        <div class="card-footer">
+          <button class="btn btn-danger" (click)="Sil()">Sil</button>
+          <button class="btn btn-primary ml-2" [routerLink]="['/etrade']">İptal</button>
+        </div>
+      </div>
+      <div [ngClass]="katSonuc.islem == true ? 'alert alert-success':'alert alert-danger'"
+        *ngIf="katSonuc.mesaj?.length > 0">{{katSonuc.mesaj}}
+      </div>
+    </div>
+  </div>
+</div>

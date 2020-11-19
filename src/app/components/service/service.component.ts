@@ -11,6 +11,7 @@ export class ServiceComponent implements OnInit {
 
   ad: string;
   kayitlar: Kisi[];
+  filtreliKayitlar: Kisi[];
 
   constructor(public servis: DataService) {
 
@@ -19,9 +20,14 @@ export class ServiceComponent implements OnInit {
   ngOnInit() {
     this.ad = this.servis.siteAdi;
     this.kayitlar = this.servis.KayitListele();
+    this.filtreliKayitlar = this.servis.KayitListele();
   }
 
-  KayitSil(k: Kisi){
+  KayitAra(d) {
+    this.filtreliKayitlar = this.kayitlar.filter(s => s.AdSoyad.includes(d) || s.Mail.includes(d))
+  }
+
+  KayitSil(k: Kisi) {
     this.servis.KayitSil(k);
   }
 }

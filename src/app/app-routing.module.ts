@@ -7,6 +7,7 @@ import { ButtonsComponent } from './components/buttons/buttons.component';
 import { CardComponent } from './components/card/card.component';
 import { ColorComponent } from './components/color/color.component';
 import { DetayComponent } from './components/detay/detay.component';
+import { EtradeComponent } from './components/etrade/etrade.component';
 import { FormCheckComponent } from './components/form-check/form-check.component';
 import { FormControlComponent } from './components/form-control/form-control.component';
 import { HeadingsComponent } from './components/headings/headings.component';
@@ -14,6 +15,7 @@ import { HomeComponent } from './components/home/home.component';
 import { ImageComponent } from './components/image/image.component';
 import { InputAccessComponent } from './components/input-access/input-access.component';
 import { JumbotronComponent } from './components/jumbotron/jumbotron.component';
+import { KatduzenlesilComponent } from './components/katduzenlesil/katduzenlesil.component';
 import { ListComponent } from './components/list/list.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
@@ -30,9 +32,9 @@ import { VariableComponent } from './components/variable/variable.component';
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent },
-  { path: 'color', component: ColorComponent},
-  { path: 'paragraph', component: ParagraphComponent},
-  { path: 'headings', component: HeadingsComponent},
+  { path: 'color', component: ColorComponent },
+  { path: 'paragraph', component: ParagraphComponent },
+  { path: 'headings', component: HeadingsComponent },
   { path: 'table', component: TableComponent },
   { path: 'image', component: ImageComponent },
   { path: 'jumbotron', component: JumbotronComponent },
@@ -54,7 +56,9 @@ const routes: Routes = [
   { path: 'adv-reg-system', component: AdvRegSystemComponent },
   { path: 'reactive-form', component: ReactiveFormComponent },
   { path: 'service', component: ServiceComponent },
-  { path: 'detay/:id', component: DetayComponent }
+  { path: 'detay/:id', component: DetayComponent },
+  { path: 'etrade', component: EtradeComponent },
+  { path: 'katduzenlesil/:id/:islem', component: KatduzenlesilComponent }
 ];
 
 @NgModule({

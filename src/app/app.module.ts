@@ -1,3 +1,4 @@
+import { EtradeComponent } from './components/etrade/etrade.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
@@ -31,10 +32,12 @@ import { NgModelComponent } from './components/ng-model/ng-model.component';
 import { RegistrationSystemComponent } from './components/registration-system/registration-system.component';
 import { AdvRegSystemComponent } from './components/adv-reg-system/adv-reg-system.component';
 import { ReactiveFormComponent } from './components/reactive-form/reactive-form.component';
-
-import { ServiceComponent } from './components/service/service.component';
-import { DataService } from './services/data.service';
 import { DetayComponent } from './components/detay/detay.component';
+import { ServiceComponent } from './components/service/service.component';
+
+import { DataService } from './services/data.service';
+import { EtradeService } from './services/etrade.service';
+import { KatduzenlesilComponent } from './components/katduzenlesil/katduzenlesil.component';
 
 @NgModule({
   declarations: [
@@ -67,7 +70,9 @@ import { DetayComponent } from './components/detay/detay.component';
     AdvRegSystemComponent,
     ReactiveFormComponent,
     ServiceComponent,
-    DetayComponent
+    DetayComponent,
+    EtradeComponent,
+    KatduzenlesilComponent
   ],
   imports: [
     BrowserModule,
@@ -76,7 +81,8 @@ import { DetayComponent } from './components/detay/detay.component';
     ReactiveFormsModule
   ],
   providers: [
-    DataService
+    DataService,
+    EtradeService
   ],
   bootstrap: [AppComponent]
 })
