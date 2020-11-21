@@ -1,3 +1,4 @@
+import { DirectiveComponent } from './components/directive/directive.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AdvRegSystemComponent } from './components/adv-reg-system/adv-reg-system.component';
@@ -27,7 +28,9 @@ import { RegistrationFormComponent } from './components/registration-form/regist
 import { RegistrationSystemComponent } from './components/registration-system/registration-system.component';
 import { ServiceComponent } from './components/service/service.component';
 import { TableComponent } from './components/table/table.component';
+import { UrunduzenlesilComponent } from './components/urunduzenlesil/urunduzenlesil.component';
 import { VariableComponent } from './components/variable/variable.component';
+import { PipeComponent } from './components/pipe/pipe.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -58,7 +61,10 @@ const routes: Routes = [
   { path: 'service', component: ServiceComponent },
   { path: 'detay/:id', component: DetayComponent },
   { path: 'etrade', component: EtradeComponent },
-  { path: 'katduzenlesil/:id/:islem', component: KatduzenlesilComponent }
+  { path: 'katduzenlesil/:id/:islem', component: KatduzenlesilComponent },
+  { path: 'urunduzenlesil/:id/:islem', component: UrunduzenlesilComponent },
+  { path: 'directive', component: DirectiveComponent },
+  { path: 'pipe', component: PipeComponent },
 ];
 
 @NgModule({

@@ -1,3 +1,5 @@
+import { BuyukHarfDirective } from './directives/buyuk-harf.directive';
+import { DirectiveComponent } from './components/directive/directive.component';
 import { EtradeComponent } from './components/etrade/etrade.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -38,6 +40,10 @@ import { ServiceComponent } from './components/service/service.component';
 import { DataService } from './services/data.service';
 import { EtradeService } from './services/etrade.service';
 import { KatduzenlesilComponent } from './components/katduzenlesil/katduzenlesil.component';
+import { UrunduzenlesilComponent } from './components/urunduzenlesil/urunduzenlesil.component';
+import { SadeceSayiDirective } from './directives/sadece-sayi.directive';
+import { PipeComponent } from './components/pipe/pipe.component';
+import { BoslukluYazPipe } from './pipes/bosluklu-yaz.pipe';
 
 @NgModule({
   declarations: [
@@ -72,7 +78,13 @@ import { KatduzenlesilComponent } from './components/katduzenlesil/katduzenlesil
     ServiceComponent,
     DetayComponent,
     EtradeComponent,
-    KatduzenlesilComponent
+    KatduzenlesilComponent,
+    UrunduzenlesilComponent,
+    DirectiveComponent,
+    SadeceSayiDirective,
+    BuyukHarfDirective,
+    PipeComponent,
+    BoslukluYazPipe
   ],
   imports: [
     BrowserModule,

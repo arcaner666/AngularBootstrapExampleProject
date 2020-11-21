@@ -8,7 +8,6 @@
           <th>Id</th>
           <th>Adı</th>
           <th>Fiyat</th>
-          <th>Kategori Id</th>
           <th>Kategori Adı</th>
           <th>Düzenle</th>
           <th>Sil</th>
@@ -18,10 +17,9 @@
             <td>{{urun.urunId}}</td>
             <td>{{urun.urunAdi}}</td>
             <td>{{urun.urunFiyat | currency:"₺"}}</td>
-            <td>{{urun.urunKatId}}</td>
             <td>{{urun.urunKatAdi}}</td>
-            <td><button class="btn btn-warning">Düzenle</button></td>
-            <td><button class="btn btn-danger">Sil</button></td>
+            <td><button class="btn btn-warning" [routerLink]="['/urunduzenlesil',urun.urunId,1]">Düzenle</button></td>
+            <td><button class="btn btn-danger" [routerLink]="['/urunduzenlesil',urun.urunId,2]">Sil</button></td>
           </tr>
         </tbody>
       </table>

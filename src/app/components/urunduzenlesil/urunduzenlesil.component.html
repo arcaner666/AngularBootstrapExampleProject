@@ -1,0 +1,52 @@
+<app-nav2></app-nav2>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <form #urunForm="ngForm" (ngSubmit)="Kaydet()" *ngIf="islem == 1">
+        <div class="card">
+          <div class="card-header bg-primary text-white">
+            <h4>Ürün Düzenle</h4>
+          </div>
+          <div class="card-body">
+            <div class="form-group">
+              <label>Ürün Adı</label>
+              <input type="text" class="form-control" name="UrunAdı" ngModel [(ngModel)]="secUrun.urunAdi">
+            </div>
+            <div class="form-group">
+              <label>Ürün Fiyatı</label>
+              <input type="number" class="form-control" name="UrunFiyatı" ngModel [(ngModel)]="secUrun.urunFiyat">
+            </div>
+            <!-- <div class="form-group">
+              <label>Ürün Kategori Adı</label>
+              <select class="form-control" name="UrunKatId">
+                <option *ngFor="let kat of kategoriler" value="{{kat.katId}}">{{kat.katAdi}}</option>
+              </select>
+            </div> -->
+          </div>
+          <div class="card-footer">
+            <input type="submit" value="Kaydet" class="btn btn-success">
+            <button class="btn btn-primary ml-2" [routerLink]="['/etrade']">İptal</button>
+          </div>
+        </div>
+      </form>
+      <div class="card" *ngIf="islem == 2">
+        <div class="card-header bg-danger text-white">
+          <h4>Ürün Sil</h4>
+        </div>
+        <div class="card-body">
+          <div class="form-group">
+            <strong>Ürün Adı: </strong> {{secUrun.urunAdi}}
+            <h5>Ürün silinecektir onaylıyor musunuz?</h5>
+          </div>
+        </div>
+        <div class="card-footer">
+          <button class="btn btn-danger" (click)="Sil()">Sil</button>
+          <button class="btn btn-primary ml-2" [routerLink]="['/etrade']">İptal</button>
+        </div>
+      </div>
+      <div [ngClass]="urunSonuc.islem == true ? 'alert alert-success':'alert alert-danger'"
+        *ngIf="urunSonuc.mesaj?.length > 0">{{urunSonuc.mesaj}}
+      </div>
+    </div>
+  </div>
+</div>
