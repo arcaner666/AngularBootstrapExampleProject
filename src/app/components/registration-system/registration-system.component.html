@@ -1,4 +1,3 @@
-<app-nav2></app-nav2>
 <div class="container">
   <div class="row">
     <div class="col-md-6">
@@ -27,29 +26,28 @@
       <h3>{{baslik}}</h3>
       <form #KayitFormu="ngForm" (ngSubmit)="Kaydet()">
         <div class="form-group">
-          <input class="form-control" type="text" name="id" #id="ngModel" 
-          [(ngModel)]="seciliKisi.Id" required hidden>
+          <input class="form-control" type="text" name="id" #id="ngModel" [(ngModel)]="seciliKisi.Id" required hidden>
         </div>
         <div class="form-group">
           <label>Adı Soyadı</label>
-          <input class="form-control" type="text" name="adsoyad" #adsoyad="ngModel" 
-          [(ngModel)]="seciliKisi.AdSoyad" required [ngClass]="adsoyad.invalid ? 'is-invalid' : 'is-valid'">
+          <input class="form-control" type="text" name="adsoyad" #adsoyad="ngModel" [(ngModel)]="seciliKisi.AdSoyad"
+            required [ngClass]="adsoyad.invalid ? 'is-invalid' : 'is-valid'">
           <div class="alert alert-danger" role="alert" *ngIf="adsoyad.invalid && adsoyad.dirty">
             Lütfen Ad Soyad Giriniz.
           </div>
         </div>
         <div class="form-group">
           <label>E-posta</label>
-          <input class="form-control" type="text" name="mail" #mail="ngModel" 
-          [(ngModel)]="seciliKisi.Mail" required [ngClass]="mail.invalid ? 'is-invalid' : 'is-valid'">
+          <input class="form-control" type="text" name="mail" #mail="ngModel" [(ngModel)]="seciliKisi.Mail" required
+            [ngClass]="mail.invalid ? 'is-invalid' : 'is-valid'">
           <div class="alert alert-danger" role="alert" *ngIf="mail.invalid && mail.dirty">
             Lütfen Geçerli Bir E-posta Giriniz.
           </div>
         </div>
         <div class="form-group">
           <label>Yaş</label>
-          <input class="form-control" type="number" name="yas" #yas="ngModel" 
-          [(ngModel)]="seciliKisi.Yas" required [ngClass]="yas.invalid ? 'is-invalid' : 'is-valid'">
+          <input class="form-control" type="number" name="yas" #yas="ngModel" [(ngModel)]="seciliKisi.Yas" required
+            [ngClass]="yas.invalid ? 'is-invalid' : 'is-valid'">
           <div class="alert alert-danger" role="alert" *ngIf="yas.invalid && yas.dirty">
             Lütfen Yaşınızı Giriniz.
           </div>
@@ -64,11 +62,11 @@
     <p>&nbsp;</p>
     <div class="col-md-12">
       <p><strong>
-        * models klasöründeki kisi.ts içerisine Kisi class'ını tanımladıktan sonra bunu istediğimiz 
-        component'te çağırabilmek için ilgili component'in ts dosyasının başına 
-        import importEdilecekModülAdı from 'modülünAppKlasörüİçindekiAdresi'; şeklinde import etmemiz 
-        gerekiyor.
-      </strong></p>
+          * models klasöründeki kisi.ts içerisine Kisi class'ını tanımladıktan sonra bunu istediğimiz
+          component'te çağırabilmek için ilgili component'in ts dosyasının başına
+          import importEdilecekModülAdı from 'modülünAppKlasörüİçindekiAdresi'; şeklinde import etmemiz
+          gerekiyor.
+        </strong></p>
     </div>
   </div>
 </div>

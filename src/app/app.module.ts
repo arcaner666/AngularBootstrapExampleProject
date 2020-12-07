@@ -22,7 +22,6 @@ import { AlertComponent } from './components/alert/alert.component';
 import { ListComponent } from './components/list/list.component';
 import { CardComponent } from './components/card/card.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
-import { Nav2Component } from './components/nav2/nav2.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FormControlComponent } from './components/form-control/form-control.component';
 import { AngularComponent } from './components/angular/angular.component';
@@ -49,7 +48,6 @@ import { BoslukluYazPipe } from './pipes/bosluklu-yaz.pipe';
   declarations: [
     AppComponent,
     NavComponent,
-    Nav2Component,
     FooterComponent,
     HomeComponent,
     ColorComponent,
